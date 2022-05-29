@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Container, Form, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap'
+import { Button, Col, Container,  Nav, Navbar, Row } from 'react-bootstrap'
 
 import Logo from '../../Assets/img/logo.png'
-import car from '../../Assets/img/img_car.png'
 import facebook from '../../Assets/img/icon_facebook.png'
 import instagram from '../../Assets/img/icon_instagram.png'
 import mail from '../../Assets/img/icon_mail.png'
@@ -12,7 +11,7 @@ import { ContentHome } from '../../Assets/Components/ContentHome/ContentHome'
 import { CardDefault } from '../../Assets/Components/Card/CardDefault'
 import { Payment } from '../../Assets/Components/Payment/Payment'
 import { getDataByID, getNewData } from '../../Redux/Action/GetAction'
-import { connect, useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import './HomePageCust.css'
 import { DetailPayment } from '../../Assets/Components/DetailPayment/DetailPayment'
 import { CardSearch } from '../../Assets/Components/CardSearch/CardSearch'
@@ -20,21 +19,31 @@ import { CardDetailPesanan } from '../../Assets/Components/CardDetailPesanan/Car
 import { PaginationandBack } from '../../Assets/Components/PaginationandBack/PaginationandBack'
 import { Bayar } from '../../Assets/Components/Bayar/Bayar'
 import { PaginationandBackdua } from '../../Assets/Components/PaginationandBackdua/PaginationandBackdua'
+import { PaymentSucess } from '../../Assets/Components/Pembayaran Berhasil/PaymentSucess'
+import { PaginationandBacktiga } from '../../Assets/Components/PaginationandBacktiga/PaginationandBacktiga'
+import { useNavigate } from 'react-router-dom'
 
-const HomePageCust = (props) => {
-    const [ParameterPindah, setParameterPindah] = useState(0);
-    // const [dataMobil, setdataMobil] = useState()
-    const [DriverStatus, setDriverStatus] = useState(null);
-    const [dataMobilFilter, setdataMobilFilter] = useState(null);
-    // const [carDetail, setcarDetail] = useState([])
-
+const HomePageCust = () => {
     const dispatch = useDispatch();
 
+    const [ParameterPindah, setParameterPindah] = useState(0);
+    const [DriverStatus, setDriverStatus] = useState(null);
+    const [dataMobilFilter, setdataMobilFilter] = useState(null);
+
+    const [File, setFile] = useState([]);
+    const [ParameterCard, setParameterCard] = useState(0);
 
     const { dataMobil } = useSelector((state) => state.getReducers);
     const { carDetail } = useSelector((state) => state.getReducers);
 
-    const [ParameterCard, setParameterCard] = useState(0);
+    const navigate = useNavigate();
+    const [Token, setToken] = useState(sessionStorage.getItem("Token Customer"))
+    useEffect(() => {
+      if (!Token) {
+          navigate(`/`)
+      }
+    
+    }, [])
 
     // Coba Redux
     useEffect(() => {
@@ -101,9 +110,32 @@ const HomePageCust = (props) => {
     }
 
     const handleBayar = () => {
-        return <Bayar />
+        return <Bayar
+            harga={carDetail.price}
+            handleBerhasil={() => { setParameterPindah(5) }}
+            setFile={setFile}
+        />
     }
 
+    const handleSuccess = () => {
+        return <PaymentSucess File={File} />
+    }
+
+
+    const handleCardDetail = () => {
+        if (ParameterCard === 0) {
+            return <CardSearch
+                handlePindah={() => { handlePindah() }}
+                statusDriver={DriverStatus}
+                setStatusDriver={(e) => setDriverStatus(e.target.value)}
+            />
+
+        } else if (ParameterCard === 1) {
+            return <CardDetailPesanan
+                statusDriver={(e) => setDriverStatus(e.target.value)}
+            />
+        }
+    }
     const fungsiDetail = () => {
         if (ParameterPindah === 1) {
             console.log("Parameter pindah = ", ParameterPindah);
@@ -118,23 +150,9 @@ const HomePageCust = (props) => {
         } else if (ParameterPindah === 4) {
             console.log("Parameter Pindah = ", ParameterPindah);
             return handleBayar();
-        }
-    }
-
-    const handleCardDetail = () => {
-        if (ParameterCard === 0) {
-            return <CardSearch
-                handlePindah={() => { handlePindah() }}
-                statusDriver={DriverStatus}
-                setStatusDriver={(e) => setDriverStatus(e.target.value)}
-            />
-
-        } else if (ParameterCard === 1) {
-            return <CardDetailPesanan
-                statusDriver={(e) => setDriverStatus(e.target.value)}
-            />
-        } else if (ParameterCard === 2) {
-            return <CardDetailPesanan />
+        } else if (ParameterPindah === 5) {
+            console.log("Parameter Pindah = ", ParameterPindah);
+            return handleSuccess();
         }
     }
 
@@ -145,6 +163,8 @@ const HomePageCust = (props) => {
             return <PaginationandBack />
         } else if (ParameterPindah === 4) {
             return <PaginationandBackdua />
+        } else if (ParameterPindah === 5) {
+            return <PaginationandBacktiga />
         }
     }
 
@@ -170,78 +190,20 @@ const HomePageCust = (props) => {
 
             {/* content isi */}
             <Container fluid className='container-fluid-content-cust'>
-                {/* {ParameterPindah === 0 ? <ContentHome /> : null} */}
-
                 {handleContentHome()}
-
             </Container>
 
 
             {/* btn search */}
             <Container className='btn-search-cust'>
                 {handleCardDetail()}
-                {/* <CardSearch
-                    handlePindah={() => { handlePindah() }}
-                    statusDriver={DriverStatus}
-                    setStatusDriver={(e) => setDriverStatus(e.target.value) }
-                /> */}
-                {/* <Card className='card-search-cust'>
-                    <div className='btn-search-container-cust'>
-                        <div className='btn-search-1-cust'>
-                            <div className='txt-btn-search-cust'>
-                                Tipe Driver
-                            </div>
-                            <Form.Select size="sm" className='btn-search-property-cust' value={DriverStatus} onChange={(e) => { setDriverStatus(e.target.value) }}>
-                                <option value="" disabled selected hidden>Pilih Tipe Driver</option>
-                                <option value="1">Dengan Sopir</option>
-                                <option value="2">Tanpa Sopir (Lepas Kunci)</option>
-                            </Form.Select>
-                        </div>
-
-
-                        <div className='btn-search-2-cust'>
-                            <div className='txt-btn-search'>
-                                Tanggal
-                            </div>
-                            <input type={"date"} className='btn-search-property' />
-
-                        </div>
-
-
-
-                        <div className='btn-search-3-cust'>
-                            <div className='txt-btn-search'>
-                                Waktu Jemput/Ambil
-                            </div>
-                            <input type="time" placeholder='Pilih Waktu' className='btn-search-property' />
-                        </div>
-
-                        <div className='btn-search-4-cust'>
-                            <div className='txt-btn-search'>
-                                Jumlah Penumpang
-                            </div>
-                            <input type="number" placeholder='Jumlah Penumpang' min={1} className='btn-search-property' />
-                        </div>
-
-                        <Button variant="primary" className='btn-Mobil-cust' onClick={() => { handlePindah() }}>Cari Mobil</Button>{' '}
-
-                    </div>
-                </Card> */}
             </Container>
 
 
 
             <Container className='container-card-cust'>
                 {fungsiDetail()}
-                {/* {ParameterPindah === 1 ? handleMap() : null}
-                {ParameterPindah === 2 ? handlePindahBayar() : null} */}
-
             </Container>
-
-
-
-
-
 
             {/* Footer */}
             <Container className='container-footer-cust'>
@@ -305,18 +267,6 @@ const HomePageCust = (props) => {
         </div>
     )
 }
-
-// const mapStateToProps = (state) =>{
-//     return{
-//         dataCount: state.manager1.count
-//     }
-// }
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         getApi: () => dispatch(getNewData())
-
-//     }
-// }
 
 export default HomePageCust
 

@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Button, Card } from 'react-bootstrap'
-import mobil from '../../img/image 1.png'
 import user from '../../img/fi_users.png'
 import setting from '../../img/fi_settings.png'
 import calender from '../../img/fi_calendar.png'
 
 import './CardDefault.css'
-import { Payment } from '../Payment/Payment'
 
-export const CardDefault = ({ nama, harga, foto, kategori, fungsiPayment, passenger, transmission, year }) => {
+export const CardDefault = ({ nama, harga, foto, fungsiPayment, passenger, transmission, year }) => {
   
 
   return (
