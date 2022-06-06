@@ -63,21 +63,21 @@ export const Dashboard = () => {
     }
 
     return (
-        <div className='main-container'>
-            <div className='container-dashboard'>
+        <div className='main-container-dashboard'>
+            <div className='container-dashboard-utama'>
                 <img alt='' src={logoKotak} className='logo-kotak' />
 
                 <div>
-                    <a href='dashboard' className='tag'> <i>
-                        <img alt='' src={logoHome} className='logo-home' />
+                    <a href='dashboard' className='tag-dashboard'> <i>
+                        <img alt='' src={logoHome} className='logo-home-dashboard' />
                     </i>
                         Dashboard
                     </a>
                 </div>
 
                 <div>
-                    <a href='cars' className='tag'> <i>
-                        <img alt='' src={logoTruck} className='logo-truck' />
+                    <a href='cars' className='tag-dashboard'> <i>
+                        <img alt='' src={logoTruck} className='logo-truck-dashboard' />
                     </i>
                         Cars
                     </a>
@@ -89,9 +89,9 @@ export const Dashboard = () => {
         </div> */}
             </div>
 
-            <div className='navbar-content'>
-                <div className='container-navbar'>
-                    <Navbar expand="lg" className='navbar-custom'>
+            <div className='navbar-content-dashboard'>
+                <div className='container-navbar-dashboard'>
+                    <Navbar expand="lg" className='navbar-custom-dashboard'>
                         <Container fluid>
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
@@ -100,7 +100,7 @@ export const Dashboard = () => {
                                     style={{ maxHeight: '100px' }}
                                     navbarScroll>
                                     <img alt='' src={logoDashboard} />
-                                    <img alt='' src={menu} className='menu-hamburger' />
+                                    <img alt='' src={menu} className='menu-hamburger-dashboard' />
 
                                 </Nav>
                                 <Form className="d-flex">
@@ -110,11 +110,11 @@ export const Dashboard = () => {
                                         className="me-2"
                                         aria-label="Search"
                                     />
-                                    <Button variant="primary" className='btn-search'>Search</Button>
+                                    <Button variant="primary" className='btn-search-dashboard'>Search</Button>
                                 </Form>
 
-                                <img alt='' src={akun} className='logo-akun' />
-                                <div className='akun-name'>
+                                <img alt='' src={akun} className='logo-akun-dashboard' />
+                                <div className='akun-name-dashboard'>
                                     Unis Badri
                                 </div>
                                 <img alt='' src={chevron} />
@@ -123,42 +123,42 @@ export const Dashboard = () => {
                     </Navbar>
                 </div>
 
-                <div className='container-content'>
-                    <div className='menu'>
-                        <div className='dashboard-up'>
+                <div className='container-content-dashboard'>
+                    <div className='menu-dashboard'>
+                        <div className='dashboard-up-dashboard'>
                             DASHBOARD
                         </div>
 
-                        <div className='dashboard-low'>
-                            <div className='dashboard-low-title'>
+                        <div className='dashboard-low-dashboard'>
+                            <div className='dashboard-low-title-dashboard'>
                                 Dashboard
                             </div>
                         </div>
                     </div>
 
-                    <div className='container-table'>
-                        <div className='main-container-table'>
+                    <div className='container-table-dashboard'>
+                        <div className='main-container-table-dashboard'>
 
-                            <div className='content-table'>
-                                <div className='dashboard-table'>
+                            <div className='content-table-dashboard'>
+                                <div className='dashboard-table-dashboard'>
                                     Dashboard
                                 </div>
 
-                                <div className='chevron-right'>
+                                <div className='chevron-right-dashboard'>
                                     <img alt='' src={chevronRright} />
                                 </div>
 
-                                <div className='dashboard-table-2'>
+                                <div className='dashboard-table-2-dashboard'>
                                     Dashboard
                                 </div>
 
                             </div>
 
-                            <div className='dashboard-3'>
+                            <div className='dashboard-3-dashboard'>
                                 Dashboard
                             </div>
 
-                            <div className='list-order'>
+                            <div className='list-order-dashboard'>
                                 <img alt='' src={horizontalLogo} />
 
                                 <div style={{ margin: '0px 0px 0px 8px' }}>
@@ -166,9 +166,9 @@ export const Dashboard = () => {
                                 </div>
                             </div>
 
-                            <div className='table-dashboard'>
+                            <div className='table-dashboard-dashboard'>
                                 <Table striped bordered hover>
-                                    <thead className='thead-table'>
+                                    <thead className='thead-table-dashboard'>
                                         <tr>
                                             <th>No</th>
                                             <th>User Email</th>
@@ -185,18 +185,18 @@ export const Dashboard = () => {
                                 </Table>
                             </div>
 
-                            <div className='property-table'>
-                                <div className='txt-table'>
+                            <div className='property-table-dashboard'>
+                                <div className='txt-table-dashboard'>
                                     Limit
                                 </div>
 
-                                <div className='txt-table' style={{ margin: '0px 0px 0px 56px' }}>
+                                <div className='txt-table-dashboard' style={{ margin: '0px 0px 0px 56px' }}>
                                     Jump to Page
                                 </div>
                             </div>
 
-                            <div className='dropdown-page'>
-                                <DropdownButton id="dropdown-basic-button" variant='light' title="10" className='dropdown-content'>
+                            <div className='dropdown-page-dashboard'>
+                                <DropdownButton id="dropdown-basic-button" variant='light' title="10" className='dropdown-content-dashboard'>
                                     <Dropdown.Item href="#/action-1">1</Dropdown.Item>
                                     <Dropdown.Item href="#/action-2">2</Dropdown.Item>
                                     <Dropdown.Item href="#/action-3">3</Dropdown.Item>
@@ -209,7 +209,7 @@ export const Dashboard = () => {
                                     <Dropdown.Item href="#/action-10">10</Dropdown.Item>
                                 </DropdownButton>
 
-                                <DropdownButton id="dropdown-basic-button" variant='light' title="10" className='dropdown-content-2'>
+                                <DropdownButton id="dropdown-basic-button" variant='light' title="10" className='dropdown-content-2-dashboard'>
                                     <Dropdown.Item href="#/action-1">1</Dropdown.Item>
                                     <Dropdown.Item href="#/action-2">2</Dropdown.Item>
                                     <Dropdown.Item href="#/action-3">3</Dropdown.Item>
@@ -222,10 +222,10 @@ export const Dashboard = () => {
                                     <Dropdown.Item href="#/action-10">10</Dropdown.Item>
                                 </DropdownButton>
 
-                                <button className='btn-go'>Go</button>
+                                <button className='btn-go-dashboard'>Go</button>
 
 
-                                <div className='pagination-no'>
+                                <div className='pagination-no-dashboard'>
 
                                     <Pagination>
                                         <Pagination.Prev />
@@ -243,7 +243,7 @@ export const Dashboard = () => {
 
 
 
-                            <div className='list-order'>
+                            <div className='list-order-dashboard'>
                                 <img alt='' src={horizontalLogo} />
 
                                 <div style={{ margin: '0px 0px 0px 8px' }}>
@@ -251,9 +251,9 @@ export const Dashboard = () => {
                                 </div>
                             </div>
 
-                            <div className='table-dashboard'>
+                            <div className='table-dashboard-dashboard'>
                                 <Table striped bordered hover>
-                                    <thead className='thead-table'>
+                                    <thead className='thead-table-dashboard'>
                                         <tr>
                                             <th>No</th>
                                             <th>Name</th>
@@ -271,18 +271,18 @@ export const Dashboard = () => {
                                 </Table>
                             </div>
 
-                            <div className='property-table'>
-                                <div className='txt-table'>
+                            <div className='property-table-dashboard'>
+                                <div className='txt-table-dashboard'>
                                     Limit
                                 </div>
 
-                                <div className='txt-table' style={{ margin: '0px 0px 0px 56px' }}>
+                                <div className='txt-table-dashboard' style={{ margin: '0px 0px 0px 56px' }}>
                                     Jump to Page
                                 </div>
                             </div>
 
-                            <div className='dropdown-page'>
-                                <DropdownButton id="dropdown-basic-button" variant='light' title="10" className='dropdown-content'>
+                            <div className='dropdown-page-dashboard'>
+                                <DropdownButton id="dropdown-basic-button" variant='light' title="10" className='dropdown-content-dashboard'>
                                     <Dropdown.Item href="#/action-1">1</Dropdown.Item>
                                     <Dropdown.Item href="#/action-2">2</Dropdown.Item>
                                     <Dropdown.Item href="#/action-3">3</Dropdown.Item>
@@ -295,7 +295,7 @@ export const Dashboard = () => {
                                     <Dropdown.Item href="#/action-10">10</Dropdown.Item>
                                 </DropdownButton>
 
-                                <DropdownButton id="dropdown-basic-button" variant='light' title="10" className='dropdown-content-2'>
+                                <DropdownButton id="dropdown-basic-button" variant='light' title="10" className='dropdown-content-2-dashboard'>
                                     <Dropdown.Item href="#/action-1">1</Dropdown.Item>
                                     <Dropdown.Item href="#/action-2">2</Dropdown.Item>
                                     <Dropdown.Item href="#/action-3">3</Dropdown.Item>
@@ -308,10 +308,10 @@ export const Dashboard = () => {
                                     <Dropdown.Item href="#/action-10">10</Dropdown.Item>
                                 </DropdownButton>
 
-                                <button className='btn-go'>Go</button>
+                                <button className='btn-go-dashboard'>Go</button>
 
 
-                                <div className='pagination-no'>
+                                <div className='pagination-no-dashboard'>
 
                                     <Pagination>
                                         <Pagination.Prev />

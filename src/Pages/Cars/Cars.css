@@ -1,4 +1,4 @@
-.main-container {
+.main-container-cars {
     display: flex;
     flex-direction: row;
     /* background-color: aqua !important; */
@@ -6,7 +6,7 @@
     /* width: 100%; */
 }
 
-.container-dashboard {
+.container-dashboard-cars {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -17,26 +17,26 @@
     position: fixed;
 }
 
-.navbar-content {
+.navbar-content-cars {
     display: flex;
     flex-direction: column;
     /* background-color: #151515; */
     width: 100%;
 }
 
-.logo-kotak {
+.logo-kotak-cars {
     margin-top: 18px;
     width: 34px;
     height: 34px;
 }
 
-.logo-home {
+.logo-home-cars {
     width: 24px;
     height: 24px;
     margin: 28px 0px 0px 0px;
 }
 
-.tag {
+.tag-cars {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +60,7 @@
 
 
 /*  */
-.container-navbar {
+.container-navbar-cars {
     display: flex;
     flex-direction: column;
     /* width: 100%; */
@@ -68,27 +68,27 @@
 }
 
 
-.navbar-custom {
+.navbar-custom-cars {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05) !important;
     background-color: #FFFFFF !important;
 
 }
 
-.btn-search {
+.btn-search-cars {
     background-color: #FFFFFF !important;
     color: #0D28A6 !important;
 }
 
-.logo-akun {
+.logo-akun-cars {
     margin-left: 24px;
     margin-right: 8px;
 }
 
-.menu-hamburger {
+.menu-hamburger-cars {
     margin: 0px 0px 0px 120px;
 }
 
-.akun-name {
+.akun-name-cars {
     color: #151515;
     font-family: 'Helvetica';
     font-style: normal;
@@ -100,7 +100,7 @@
 }
 
 
-.container-content {
+.container-content-cars {
     display: flex;
     /* background-color: #0D28A6; */
     height: 100vh;
@@ -109,7 +109,7 @@
 }
 
 
-.menu {
+.menu-cars {
     display: flex;
     flex-direction: column;
     background-color: aqua;
@@ -118,7 +118,7 @@
     background-color: #FFFFFF;
 }
 
-.dashboard-up {
+.dashboard-up-cars {
     margin: 35px 104px 19px 24px;
     font-family: 'Helvetica';
     font-style: normal;
@@ -129,7 +129,7 @@
 
 }
 
-.dashboard-low {
+.dashboard-low-cars {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -138,7 +138,7 @@
     text-align: start;
 }
 
-.dashboard-low-title {
+.dashboard-low-title-cars {
     margin: 11px 48px 11px 24px;
     font-family: 'Helvetica';
     font-style: normal;
@@ -149,14 +149,14 @@
 }
 
 /*  */
-.container-table {
+.container-table-cars {
     display: flex;
     flex-direction: column;
     width: 100%;
 
 }
 
-.main-container-table-cars {
+.main-container-table-cars-cars {
     display: flex;
     flex-direction: column;
 
@@ -167,14 +167,14 @@
 
 }
 
-.content-table {
+.content-table-cars {
     display: flex;
     flex-direction: row;
     /* padding: 32px 25px 38px 25px; */
 
 }
 
-.dashboard-table {
+.dashboard-table-cars {
     color: #000000;
     font-family: 'Helvetica';
     font-style: normal;
@@ -184,11 +184,11 @@
     margin-top: 5px;
 }
 
-.chevron-right {
+.chevron-right-cars {
     margin: 0px 10px 0px 10px;
 }
 
-.dashboard-table-2 {
+.dashboard-table-2-cars {
     color: #222222;
     font-family: 'Rubik';
     font-style: normal;
@@ -200,7 +200,7 @@
 
 }
 
-.dashboard-3-cars {
+.dashboard-3-cars-cars {
     display: flex;
     flex-direction: row;
     margin-top: 24px;
@@ -216,14 +216,14 @@
     /* width: 100%; */
 }
 
-.container-btn-new-car {
+.container-btn-new-car-cars {
     display: flex;
     flex-direction: row;
     justify-content: end;
     flex: 4;
 }
 
-.btn-new-car {
+.btn-new-car-cars {
     background-color: #0D28A6 !important;
     border-radius: 2px !important;
     font-family: 'Helvetica';
@@ -233,13 +233,13 @@
     line-height: 20px !important;
 }
 
-.list-btn {
+.list-btn-cars {
     display: flex;
     flex-direction: row;
     margin-top: 26px;
 }
 
-.btn-group {
+.btn-group-cars {
     margin-right: 16px;
     background-color: #FFFFFF !important;
     color: #AEB7E1 !important;
@@ -248,7 +248,7 @@
 }
 
 
-.cards-group {
+.cards-group-cars {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

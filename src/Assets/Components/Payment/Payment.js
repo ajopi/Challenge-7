@@ -8,9 +8,13 @@ import calender from '../../img/fi_calendar.png'
 import ModalImage from "react-modal-image";
 import { DetailPayment } from '../DetailPayment/DetailPayment'
 import { useNavigate } from 'react-router-dom'
+import 'chart.js/auto';
+// import { faker } from '@faker-js/faker';
+// import { Doughnut, Line, Pie } from 'react-chartjs-2';
 
 
 export const Payment = ({ id, gambar, nama, harga, passenger, transmission, year, fungsiDetailPayment }) => {
+  
 
   return (
     <div className='container-detail-car'>
@@ -81,7 +85,7 @@ export const Payment = ({ id, gambar, nama, harga, passenger, transmission, year
               className="modal-image-mobil"
               small={gambar}
               large={gambar}
-              showRotate = {true}
+              showRotate={true}
             />
 
             <Card.Body>
@@ -128,6 +132,8 @@ export const Payment = ({ id, gambar, nama, harga, passenger, transmission, year
               <Button variant="primary" className='property-card-btn' onClick={fungsiDetailPayment}>Lanjutkan Pembayaran</Button>
             </Card.Body>
           </Card>
+
+          
         </Col>
       </Row>
 

@@ -68,20 +68,20 @@ export const Cars = () => {
     }
 
     return (
-        <div className='main-container'>
-            <div className='container-dashboard'>
-                <img alt='' src={logoKotak} className='logo-kotak' />
+        <div className='main-container-cars'>
+            <div className='container-dashboard-cars'>
+                <img alt='' src={logoKotak} className='logo-kotak-cars' />
 
                 <div>
-                    <a href='dashboard' className='tag'> <i>
-                        <img alt='' src={logoHome} className='logo-home' />
+                    <a href='dashboard' className='tag-cars'> <i>
+                        <img alt='' src={logoHome} className='logo-home-cars' />
                     </i>
                         Dashboard
                     </a>
                 </div>
 
                 <div>
-                    <a href='cars' className='tag'> <i>
+                    <a href='cars' className='tag-cars'> <i>
                         <img alt='' src={logoTruck} className='logo-truck' />
                     </i>
                         Cars
@@ -91,9 +91,9 @@ export const Cars = () => {
 
             </div>
 
-            <div className='navbar-content'>
-                <div className='container-navbar'>
-                    <Navbar expand="lg" className='navbar-custom'>
+            <div className='navbar-content-cars'>
+                <div className='container-navbar-cars'>
+                    <Navbar expand="lg" className='navbar-custom-cars'>
                         <Container fluid>
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
@@ -102,7 +102,7 @@ export const Cars = () => {
                                     style={{ maxHeight: '100px' }}
                                     navbarScroll>
                                     <img alt='' src={logoDashboard} />
-                                    <img alt='' src={menu} className='menu-hamburger' />
+                                    <img alt='' src={menu} className='menu-hamburger-cars' />
 
                                 </Nav>
                                 <Form className="d-flex">
@@ -112,11 +112,11 @@ export const Cars = () => {
                                         className="me-2"
                                         aria-label="Search"
                                     />
-                                    <Button variant="primary" className='btn-search'>Search</Button>
+                                    <Button variant="primary" className='btn-search-cars'>Search</Button>
                                 </Form>
 
-                                <img alt='' src={akun} className='logo-akun' />
-                                <div className='akun-name'>
+                                <img alt='' src={akun} className='logo-akun-cars' />
+                                <div className='akun-name-cars'>
                                     Unis Badri
                                 </div>
                                 <img alt='' src={chevron} />
@@ -125,54 +125,54 @@ export const Cars = () => {
                     </Navbar>
                 </div>
 
-                <div className='container-content'>
-                    <div className='menu'>
-                        <div className='dashboard-up'>
+                <div className='container-content-cars'>
+                    <div className='menu-cars'>
+                        <div className='dashboard-up-cars'>
                             CARS
                         </div>
 
-                        <div className='dashboard-low'>
-                            <div className='dashboard-low-title'>
+                        <div className='dashboard-low-cars'>
+                            <div className='dashboard-low-title-cars'>
                                 List Cars
                             </div>
                         </div>
                     </div>
 
-                    <div className='container-table'>
-                        <div className='main-container-table-cars'>
+                    <div className='container-table-cars'>
+                        <div className='main-container-table-cars-cars'>
 
-                            <div className='content-table'>
-                                <div className='dashboard-table'>
+                            <div className='content-table-cars'>
+                                <div className='dashboard-table-cars'>
                                     Cars
                                 </div>
 
-                                <div className='chevron-right'>
+                                <div className='chevron-right-cars'>
                                     <img alt='' src={chevronRright} />
                                 </div>
 
-                                <div className='dashboard-table-2'>
+                                <div className='dashboard-table-2-cars'>
                                     List Cars
                                 </div>
 
                             </div>
 
-                            <div className='dashboard-3-cars'>
+                            <div className='dashboard-3-cars-cars'>
                                 List Cars
-                                <div className='container-btn-new-car'>
-                                    <Button variant="primary" className='btn-new-car' onClick={handleNewCar}>+ Add New Car</Button>{' '}
+                                <div className='container-btn-new-car-cars'>
+                                    <Button variant="primary" className='btn-new-car-cars' onClick={handleNewCar}>+ Add New Car</Button>{' '}
                                 </div>
 
                             </div>
 
-                            <div className='list-btn'>
-                                <Button variant="outline-primary" className='btn-group'>All</Button>{' '}
-                                <Button variant="outline-primary" className='btn-group'>Small</Button>{' '}
-                                <Button variant="outline-primary" className='btn-group'>Medium</Button>{' '}
-                                <Button variant="outline-primary" className='btn-group'>Large</Button>{' '}
+                            <div className='list-btn-cars'>
+                                <Button variant="outline-primary" className='btn-group-cars'>All</Button>{' '}
+                                <Button variant="outline-primary" className='btn-group-cars'>Small</Button>{' '}
+                                <Button variant="outline-primary" className='btn-group-cars'>Medium</Button>{' '}
+                                <Button variant="outline-primary" className='btn-group-cars'>Large</Button>{' '}
                             </div>
 
 
-                            <div className='cards-group'>
+                            <div className='cards-group-cars'>
                                 {handleMap()}
                             </div>
 

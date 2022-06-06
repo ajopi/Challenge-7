@@ -1,4 +1,4 @@
-.main-container {
+.main-container-dashboard {
     display: flex;
     flex-direction: row;
     /* background-color: aqua !important; */
@@ -6,7 +6,7 @@
     /* width: 100%; */
 }
 
-.container-dashboard {
+.container-dashboard-utama {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -17,7 +17,7 @@
     position: fixed;
 }
 
-.navbar-content {
+.navbar-content-dashboard {
     display: flex;
     flex-direction: column;
     /* background-color: #151515; */
@@ -30,13 +30,13 @@
     height: 34px;
 }
 
-.logo-home {
+.logo-home-dashboard {
     width: 24px;
     height: 24px;
     margin: 28px 0px 0px 0px;
 }
 
-.tag {
+.tag-dashboard {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,13 +54,13 @@
 }
 
 
-.logo-truck {
+.logo-truck-dashboard {
     margin-top: 20px;
 }
 
 
 /*  */
-.container-navbar {
+.container-navbar-dashboard {
     display: flex;
     flex-direction: column;
     /* width: 100%; */
@@ -68,27 +68,27 @@
 }
 
 
-.navbar-custom {
+.navbar-custom-dashboard {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05) !important;
     background-color: #FFFFFF !important;
 
 }
 
-.btn-search {
+.btn-search-dashboard {
     background-color: #FFFFFF !important;
     color: #0D28A6 !important;
 }
 
-.logo-akun {
+.logo-akun-dashboard {
     margin-left: 24px;
     margin-right: 8px;
 }
 
-.menu-hamburger {
+.menu-hamburger-dashboard {
     margin: 0px 0px 0px 120px;
 }
 
-.akun-name {
+.akun-name-dashboard {
     color: #151515;
     font-family: 'Helvetica';
     font-style: normal;
@@ -100,7 +100,7 @@
 }
 
 
-.container-content {
+.container-content-dashboard {
     display: flex;
     /* background-color: #0D28A6; */
     height: 100vh;
@@ -109,7 +109,7 @@
 }
 
 
-.menu {
+.menu-dashboard {
     display: flex;
     flex-direction: column;
     background-color: aqua;
@@ -118,7 +118,7 @@
     background-color: #FFFFFF;
 }
 
-.dashboard-up {
+.dashboard-up-dashboard {
     margin: 35px 104px 19px 24px;
     font-family: 'Helvetica';
     font-style: normal;
@@ -129,7 +129,7 @@
 
 }
 
-.dashboard-low {
+.dashboard-low-dashboard {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -138,7 +138,7 @@
     text-align: start;
 }
 
-.dashboard-low-title {
+.dashboard-low-title-dashboard {
     margin: 11px 48px 11px 24px;
     font-family: 'Helvetica';
     font-style: normal;
@@ -149,14 +149,14 @@
 }
 
 /*  */
-.container-table {
+.container-table-dashboard {
     display: flex;
     flex-direction: column;
     width: 100%;
 
 }
 
-.main-container-table {
+.main-container-table-dashboard {
     display: flex;
     flex-direction: column;
     
@@ -167,14 +167,14 @@
 
 }
 
-.content-table {
+.content-table-dashboard {
     display: flex;
     flex-direction: row;
     /* padding: 32px 25px 38px 25px; */
 
 }
 
-.dashboard-table {
+.dashboard-table-dashboard {
     color: #000000;
     font-family: 'Helvetica';
     font-style: normal;
@@ -184,11 +184,11 @@
     margin-top: 5px;
 }
 
-.chevron-right {
+.chevron-right-dashboard {
     margin: 0px 10px 0px 10px;
 }
 
-.dashboard-table-2 {
+.dashboard-table-2-dashboard {
     color: #222222;
     font-family: 'Rubik';
     font-style: normal;
@@ -199,7 +199,7 @@
 
 }
 
-.dashboard-3 {
+.dashboard-3-dashboard {
     margin-top: 24px;
     font-family: 'Helvetica';
     font-style: normal;
@@ -208,27 +208,27 @@
     line-height: 30px;
 }
 
-.list-order {
+.list-order-dashboard {
     display: flex;
     flex-direction: row;
     margin-top: 26px;
 }
 
-.table-dashboard {
+.table-dashboard-dashboard {
     display: flex;
     margin-top: 18px;
 }
 
-.thead-table {
+.thead-table-dashboard {
     background-color: #CFD4ED;
 }
 
-.property-table {
+.property-table-dashboard {
     display: flex;
     flex-direction: row;
 }
 
-.txt-table {
+.txt-table-dashboard {
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 300;
@@ -237,22 +237,22 @@
     color: #000000;
 }
 
-.dropdown-page {
+.dropdown-page-dashboard {
     display: flex;
     flex-direction: row;
     margin-top: 8px;
 }
 
-.dropdown-content {
+.dropdown-content-dashboard {
     /* border: 1px solid #D0D0D0; */
     color: #8A8A8A !important;
 }
 
-.dropdown-content-2 {
+.dropdown-content-2-dashboard {
     margin-left: 24px;
 }
 
-.btn-go {
+.btn-go-dashboard {
     background-color: #0D28A6;
     color: #FFFFFF;
     text-decoration: none;
@@ -268,7 +268,7 @@
     line-height: 20px;
 }
 
-.pagination-no {
+.pagination-no-dashboard {
     display: flex;
     width: 100%;
 
