@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Layout } from './Pages/Layout';
@@ -12,13 +12,13 @@ import { Provider } from 'react-redux';
 store.subscribe(() => {
   console.log(store.getState(), "ini adalah data API");
 })
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
 
       <Layout />
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
